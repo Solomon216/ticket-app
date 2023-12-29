@@ -1,0 +1,37 @@
+<%- include("partials/header"); -%>
+<div class="container1">
+<div class="stagestext"><h1>STAGES</h1></div>
+<div class="stages">
+    <div class="stage sa" onclick="toggleDiv()">
+        <div class="rect stageA"></div>
+        <div class="textinbox">A</div>
+    </div>
+    <div class="stage sb" onclick="toggleDiv()">
+        <div class="rect stageB"></div>
+        <div class="textinbox">B</div>
+    </div>
+    <div class="stage sc" onclick="toggleDiv()">
+        <div class="rect stageC"></div>
+        <div class="textinbox">C</div>
+    </div>
+    <div class="stage sd" onclick="toggleDiv()">
+        <div class="rect stageD"></div>
+        <div class="textinbox">D</div>
+    </div>
+</div>
+<div class="another-rect" id="another-rect">
+    <div class="q-title">Quantity</div>
+    <input class="q-value" type="number" min=0 max=99 step=1 value=0 onchange="updateValue()" id="quantity"/>
+    <br/>
+    <button class="q-button" id="buy-ticket" onclick="location.href='/purchase/<%=show%>'">Buy</button>
+</div>
+
+<script>
+    function toggleDiv() {
+      var div2 = document.getElementById('another-rect');
+      div2.style.display = (div2.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+  </div>
+
+  <%- include("partials/footer"); -%>

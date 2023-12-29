@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+    <div class="caption">
+
+    </div>
+    <div class="events">
+        <h1>EVENTS</h1>
+        <div class="cards">
+            <%  shows.forEach(function(show){ %>
+                <a href="/details/<%= show.id %>">
+                    <div class="card" id="card1">
+                        <img class="artistimg" src="<%=show.image%>" />
+                        <div class="overlay-rect"></div>
+                        <div class="show-name">
+                            <h1><%= show.name %></h1>
+                        </div>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+<%- include("partials/footer"); -%>
